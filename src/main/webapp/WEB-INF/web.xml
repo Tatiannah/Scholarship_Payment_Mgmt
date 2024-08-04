@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <welcome-file-list>
+  	<welcome-file>accueil.jsp</welcome-file>
+  	
+  </welcome-file-list>
+
+  <error-page>
+  <exception-type>java.lang.Exception</exception-type>
+  <location>/error.jsp</location>
+  </error-page>
+ 
+ 
+   <servlet>
+ <servlet-name>etudiantServlet</servlet-name>
+ <servlet-class>com.xadmin.paye.web.etudiantServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>etudiantServlet</servlet-name>
+ <url-pattern>/etudiant/*</url-pattern>
+ </servlet-mapping>
+ 
+  
+  
+ <servlet>
+ <servlet-name>montantServlet</servlet-name>
+ <servlet-class>com.xadmin.paye.web.montantServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>montantServlet</servlet-name>
+ <url-pattern>/montant/*</url-pattern>
+ </servlet-mapping>
+ 
+  <servlet>
+ <servlet-name>payerServlet</servlet-name>
+ <servlet-class>com.xadmin.paye.web.payerServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ <servlet-name>payerServlet</servlet-name>
+ <url-pattern>/payer/*</url-pattern>
+ </servlet-mapping>
+ <servlet>
+    <servlet-name>retardataireServlet</servlet-name>
+    <servlet-class>com.xadmin.paye.web.retardataireServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>retardataireServlet</servlet-name>
+    <url-pattern>/retardataire/*</url-pattern>
+</servlet-mapping>
+</web-app>
